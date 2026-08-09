@@ -1,0 +1,469 @@
+:root {
+    --primary: #2563EB;
+    --primary-hover: #1E40AF;
+    --secondary: #F8FAFC;
+    --text-dark: #1E293B;
+    --text-gray: #64748B;
+    --white: #ffffff;
+    --radius: 24px;
+    --shadow: 0 10px 30px rgba(37, 99, 235, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+}
+
+body {
+    color: var(--text-dark);
+    background: var(--white);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background: var(--white);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1.2;
+}
+
+.logo span {
+    color: var(--primary);
+    font-size: 13px;
+    display: block;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.btn-wa {
+    background: #25D366;
+    color: var(--white);
+    padding: 12px 20px;
+    border-radius: 14px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+}
+
+.btn-wa:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+}
+
+.contact-info .btn-wa {
+    margin-top: 10px;
+}
+
+.menu-container {
+    position: relative;
+}
+
+.dots-btn {
+    background: var(--secondary);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    transition: 0.3s;
+}
+
+.dots-btn:hover {
+    background: #e2e8f0;
+}
+
+.dots-btn span {
+    width: 4px;
+    height: 4px;
+    background: var(--text-dark);
+    border-radius: 50%;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background: var(--white);
+    min-width: 200px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border: 1px solid #edf2f7;
+    display: none;
+    overflow: hidden;
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 12px 20px;
+    color: var(--text-dark);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.dropdown-menu a:hover {
+    background: var(--secondary);
+    color: var(--primary);
+}
+
+.hero {
+    padding: 60px 5%;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    min-height: 60vh;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.status-badge {
+    background: #E0E7FF;
+    color: var(--primary);
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero h1 b {
+    color: var(--primary);
+}
+
+.hero p {
+    font-size: 18px;
+    color: var(--text-gray);
+    margin-bottom: 30px;
+}
+
+.hero-img {
+    flex: 1;
+    text-align: right;
+}
+
+.hero-img img {
+    width: 100%;
+    max-width: 550px;
+    border-radius: 30px;
+    box-shadow: var(--shadow);
+}
+
+.hero-actions {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 15px 30px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 700;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background: var(--primary-hover);
+}
+
+.btn-secondary {
+    background: var(--secondary);
+    color: var(--text-dark);
+}
+
+.btn-secondary:hover {
+    background: #e2e8f0;
+}
+
+.section {
+    padding: 80px 5%;
+}
+
+.section-title {
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 800;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid #edf2f7;
+    background: var(--white);
+    transition: 0.3s;
+}
+
+.card:hover {
+    border-color: var(--primary);
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.card h3 {
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.contact-section {
+    padding: 80px 5%;
+    background: var(--secondary);
+}
+
+.contact-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    background: var(--white);
+    border-radius: 30px;
+    padding: 50px;
+    display: flex;
+    gap: 50px;
+    box-shadow: var(--shadow);
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-info h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    color: var(--text-gray);
+    margin-bottom: 30px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.icon-box {
+    background: #EEF2FF;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.contact-item h4 {
+    font-size: 14px;
+    color: var(--text-gray);
+    margin-bottom: 4px;
+}
+
+.contact-item span {
+    font-weight: 700;
+    font-size: 16px;
+    display: block;
+}
+
+.map-placeholder {
+    flex: 1;
+    background: #E2E8F0;
+    border-radius: 20px;
+    min-height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-gray);
+    background-image: url('https://img.freepik.com/free-vector/city-map-with-navigation-pins_23-2148293527.jpg?size=626&ext=jpg');
+    background-size: cover;
+    border: 1px solid #cbd5e1;
+}
+
+.map-note {
+    background: var(--white);
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.footer {
+    text-align: center;
+    padding: 40px;
+    color: var(--text-gray);
+    border-top: 1px solid #eee;
+}
+
+@media (max-width: 992px) {
+    .hero,
+    .contact-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-img,
+    .map-placeholder {
+        width: 100%;
+    }
+
+    .contact-item {
+        justify-content: center;
+        text-align: left;
+    }
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+/* Стили секции Преимущества */
+.benefits-section {
+    padding: 100px 5%;
+    background-color: #ffffff;
+}
+
+.benefits-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.benefits-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.benefits-subtitle {
+    color: #2563EB;
+    font-weight: 800;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.benefits-title {
+    font-size: 36px;
+    font-weight: 800;
+    color: #1E293B;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.2;
+}
+
+.benefits-title b {
+    color: #2563EB;
+}
+
+/* Сетка */
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.benefit-item {
+    display: flex;
+    gap: 20px;
+    padding: 30px;
+    border-radius: 24px;
+    background: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    transition: all 0.3s ease;
+}
+
+.benefit-item:hover {
+    background: #ffffff;
+    border-color: #2563EB;
+    box-shadow: 0 15px 35px rgba(37, 99, 235, 0.1);
+    transform: translateY(-5px);
+}
+
+.benefit-icon {
+    font-size: 32px;
+    min-width: 60px;
+    height: 60px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.benefit-content h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #1E293B;
+}
+
+.benefit-content p {
+    font-size: 15px;
+    color: #64748B;
+    line-height: 1.6;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .benefits-title {
+        font-size: 28px;
+    }
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+    .benefit-item {
+        padding: 20px;
+    }
+}
